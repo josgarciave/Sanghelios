@@ -22,3 +22,10 @@ async def sanghelios_informe_eda(request: Request):
     return templates.TemplateResponse(
         request=request, name="sanghelios_informe_eda.html", context={}
     )
+
+
+@app.get("/donation", response_class=HTMLResponse)
+async def valid_donation(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="valid_donation.html", context={}
+    )
