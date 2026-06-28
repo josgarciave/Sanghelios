@@ -13,12 +13,12 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 
 <!-- Estilos por vista -->
-<link rel="stylesheet" href="static/css/base.css">
-<link rel="stylesheet" href="static/css/inicio.css">
-<link rel="stylesheet" href="static/css/dashboard.css">
-<link rel="stylesheet" href="static/css/mapa.css">
-<link rel="stylesheet" href="static/css/campana.css">
-<link rel="stylesheet" href="static/css/about.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<link rel="stylesheet" href="/static/css/inicio.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+<link rel="stylesheet" href="/static/css/mapa.css">
+<link rel="stylesheet" href="/static/css/campana.css">
+<link rel="stylesheet" href="/static/css/about.css">
 </head>
 <body>
 
@@ -55,9 +55,15 @@
       </button>
     </a>
     <a href="/donation">
-      <button class="tab-btn" data-view="donation" onclick="switchView('donation')">
+      <button class="tab-btn" data-view="donation" onclick="switchView('about')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 5.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="3.6" r="0.7" fill="currentColor"/></svg>
-        Puedo Donar?
+        Puedo Donar Sangre?
+      </button>
+    </a>
+    <a href="/image_generation">
+      <button class="tab-btn" data-view="image_generation" onclick="switchView('about')">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.1"/><path d="M6 5.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="3.6" r="0.7" fill="currentColor"/></svg>
+        Genera imagenes
       </button>
     </a>
   </div>
@@ -379,11 +385,11 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 
 <!-- Módulos de la aplicación (el orden importa: config → data → vistas → app) -->
-<script src="static/js/config.js"></script>
-<script src="static/js/data.js"></script>
-<script src="static/js/dashboard.js"></script>
-<script src="static/js/mapa.js"></script>
-<script src="static/js/campana.js"></script>
-<script src="static/js/app.js"></script>
+<script src="/static/js/config.js"></script>
+<script src="/static/js/data.js"></script>
+<script src="/static/js/dashboard.js"></script>
+<script src="/static/js/map.js"></script>
+<script src="/static/js/campana.js"></script>
+<script src="/static/js/app.js"></script>
 </body>
 </html>
