@@ -107,10 +107,16 @@ function switchScenario(id) {
   updateOverlay(config);
 
   clearMap3DMarkers();
-  if (map3d) renderMap3DScenario();
+  if (map3d) {
+    renderMap3DScenario();
+    setTimeout(() => flyToScenarioCenter(), 100);
+  }
 
   clearPreviewMapMarkers();
-  if (previewMap) renderPreviewMapScenario();
+  if (previewMap) {
+    renderPreviewMapScenario();
+    previewMap.setCenter([config.center.lng, config.center.lat]);
+  }
 
   if (typeof regenerateForScenario === 'function') {
     regenerateForScenario(config.dataParams);
